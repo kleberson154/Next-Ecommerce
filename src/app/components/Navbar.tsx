@@ -1,7 +1,7 @@
 import { SignInButton, UserButton } from '@clerk/nextjs'
 import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta'
-import { IoCartOutline } from 'react-icons/io5'
 import Link from 'next/link'
+import Cart from './Cart'
 
 export default function Navbar() {
   return (
@@ -13,12 +13,7 @@ export default function Navbar() {
         Next Store
       </Link>
       <div className="flex items-center gap-8">
-        <div className="flex items-center cursor-pointer relative">
-          <IoCartOutline className="h-7 w-7 " />
-          <span className="bg-teal-600 text-sm font-bold rounded-full h-5 w-5 flex items-center justify-center absolute left-4 bottom-4">
-            2
-          </span>
-        </div>
+        <Cart />
         <div>
           <SignedIn>
             <UserButton />
